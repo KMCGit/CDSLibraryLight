@@ -23,7 +23,7 @@ define APPROVE_PRIORAUTH:
   Age<70
 
 define RESULT_InfoLink:
-    'https://www.cms.gov/Research-Statistics-Data-and-Systems/Computer-Data-and-Systems/Electronic-Clinical-Templates/Downloads/Respiratory-Assist-Device-Order-Template-Draft-20180412-R10b.pdf'
+    'https://ExampleUMVendor.com/link/'
 
 define RESULT_requestId:
   service_request

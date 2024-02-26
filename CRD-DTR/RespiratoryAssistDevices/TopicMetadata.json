@@ -1,6 +1,6 @@
 {
   "topic": "RespiratoryAssistDevices",
-  "payers": ["cms"],
+  "payers": ["cms", "sc"],
   "mappings": [
     {
       "codeSystem": "hcpcs",

@@ -4,33 +4,39 @@ include FHIRHelpers version '4.0.0' called FHIRHelpers
 
 parameter Patient Patient
 parameter service_request ServiceRequest
+parameter appointment Appointment
+parameter Coverage Coverage
 
 define "Age":
-  AgeInYears()
+    AgeInYears()
 
 define RULE_APPLIES:
-true
+  true
 
 define PRIORAUTH_REQUIRED:
-true
+  true
 
 define DOCUMENTATION_REQUIRED:
   true
 
 define APPROVE_PRIORAUTH:
-  "Age" >= 70
+  Age<70
 
 define RESULT_InfoLink:
-  'https://www.cms.gov/Outreach-and-Education/Medicare-Learning-Network-MLN/MLNProducts/Downloads/Medicare-Home-Health-Benefit-Text-Only.pdf'
-
-define RESULT_QuestionnaireOrderUri:
-  'Questionnaire/HomeHealthServices'
-
-define RESULT_QuestionnairePlanOfCareUri:
-  'Questionnaire/HomeHealthServicesPlanOfCare'
-  
-define RESULT_QuestionnaireFaceToFaceUri:
-  'Questionnaire/HomeHealthServicesFaceToFace'
+    'https://ExampleUMVendor.com/link/'
 
 define RESULT_requestId:
   service_request
+
+define RESULT_appointmentId:
+  appointment
+
+define "network" : Coverage.network
+
+define OUT_NETWORK:
+ if not (network in {'GoldCare Network'})
+  then true
+else false
+
+define SPECIAL_INSTRUCTIONS:
+  'Blood Test and Allergy Checks to the Radioactive dye are required to be performed'
