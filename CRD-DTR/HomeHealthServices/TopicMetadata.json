@@ -1,6 +1,6 @@
 {
   "topic": "HomeHealthServices",
-  "payers": ["cms", "sc"],
+  "payers": ["cms", "sc", "onyx"],
   "mappings": [
     {
       "codeSystem": "hcpcs",
