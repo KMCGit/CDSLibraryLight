@@ -17,7 +17,7 @@ define PRIORAUTH_REQUIRED:
   false
 
 define DOCUMENTATION_REQUIRED:
-  true
+  false
 
 define APPROVE_PRIORAUTH:
   Age<70
