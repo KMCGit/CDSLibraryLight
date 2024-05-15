@@ -14,7 +14,7 @@ define RULE_APPLIES:
   true
 
 define PRIORAUTH_REQUIRED:
-  true
+  false
 
 define DOCUMENTATION_REQUIRED:
   true
